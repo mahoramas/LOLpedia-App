@@ -1,4 +1,4 @@
-package es.ies.puerto;
+package es.mahoramas.lolpedia;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
