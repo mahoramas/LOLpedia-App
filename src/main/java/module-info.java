@@ -4,7 +4,6 @@ module es.mahoramas.lolpedia {
 
     requires org.controlsfx.controls;
     requires javafx.graphics;
-    requires com.fasterxml.jackson.databind;
     requires java.xml;
 
     opens es.mahoramas.lolpedia to javafx.fxml;
