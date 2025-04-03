@@ -4,12 +4,13 @@ module es.mahoramas.lolpedia {
 
     requires org.controlsfx.controls;
     requires javafx.graphics;
-    requires java.xml;
+    requires java.sql;
 
     opens es.mahoramas.lolpedia to javafx.fxml;
     exports es.mahoramas.lolpedia;
+    exports es.mahoramas.lolpedia.servicio;
     exports es.mahoramas.lolpedia.controller;
     exports es.mahoramas.lolpedia.model;
-
     opens es.mahoramas.lolpedia.controller to javafx.fxml;
+    opens es.mahoramas.lolpedia.controller.abstractas to javafx.fxml;
 }

@@ -12,6 +12,7 @@
 
 <VBox id="box" alignment="TOP_CENTER" prefHeight="422.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <ComboBox fx:id="comboIdioma" onAction="#seleccionarIdiomaClick" prefWidth="150.0" promptText="idiomas" />
       <Label id="title" text="LOLpedia" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,8 +22,8 @@
       <TextField id="found" fx:id="textFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Usuario" />
       <PasswordField id="found" fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Contraseña" />
       <Hyperlink text="¿Olvidaste la contraseña?" />
-      <Button id="button" mnemonicParsing="false" text="Iniciar sesion" />
-      <Button id="button" mnemonicParsing="false" text="Registrarse" />
+      <Button id="button" fx:id="buttonAceptar" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
+      <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar">
    </children>
    <padding>
       <Insets top="20.0" />
