@@ -17,6 +17,7 @@
     -fx-padding: 10px;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgb(255, 255, 255), 3, 0.8, 0, 0);
 }
 #button:hover{
     -fx-background-color: #187c3f;
@@ -26,4 +27,17 @@
     -fx-font-size: 26px;
     -fx-text-fill: white;
     -fx-font-weight: bold;
+}
+
+#text{
+    -fx-fill: black;
+    -fx-effect: dropshadow(gaussian, white, 5, 0.8, 0, 0);
+}
+
+#link{
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-underline: true;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, lightgray, 2, 0.2, 0, 0);
 }

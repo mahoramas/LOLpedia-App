@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="358.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PerfilUsuarioController">
+<VBox id="box" alignment="TOP_CENTER" prefHeight="358.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PerfilUsuarioController">
    <children>
-      <Text fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
+      <Text id="text" fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
       <TextField id="found" fx:id="textFieldUser" maxHeight="-Infinity" maxWidth="-Infinity" promptText="myUser" />
-      <Text fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text id="text" fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
       <PasswordField id="found" fx:id="textFieldPasswordUser" maxHeight="-Infinity" maxWidth="-Infinity" promptText="********" />
-      <Text fx:id="textNombre" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+      <Text id="text" fx:id="textNombre" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
          <VBox.margin>
             <Insets top="20.0" />
          </VBox.margin>
       </Text>
       <TextField id="found" fx:id="textFieldNombre2" maxWidth="-Infinity" promptText="nombre" />
-      <Text fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text id="text" fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <TextField id="found" fx:id="textFieldEmail3" maxHeight="-Infinity" maxWidth="-Infinity" promptText="email" />
-      <Button fx:id="buttonVolverAtras" mnemonicParsing="false" onAction="#onClickVolver" text="volver atras" />
+      <Button id="button" fx:id="buttonVolverAtras" mnemonicParsing="false" onAction="#onClickVolver" text="volver atras" />
    </children>
    <opaqueInsets>
       <Insets />

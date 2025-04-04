@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="root" alignment="CENTER" prefHeight="594.0" prefWidth="392.0" spacing="20.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RegistroController">
+<VBox id="box" alignment="CENTER" prefHeight="594.0" prefWidth="392.0" spacing="20.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RegistroController">
    <children>
       <Button id="button" fx:id="atrasButton" mnemonicParsing="false" onAction="#volverAtrasClick" text="Atras">
          <VBox.margin>
             <Insets right="300.0" top="20.0" />
          </VBox.margin>
       </Button>
-      <Text fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
+      <Text id="text" fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
       <TextField id="found" fx:id="textFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir usuario" />
-      <Text fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+      <Text id="text" fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
       <PasswordField id="found" fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir password" />
-      <Text fx:id="textContrasenia2" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetir Contraseña" />
+      <Text id="text" fx:id="textContrasenia2" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetir Contraseña" />
       <PasswordField id="found" fx:id="textFieldPassword2" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir password" />
-      <Text fx:id="textNombre" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text id="text" fx:id="textNombre" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <TextField id="found" fx:id="textFieldNombre" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir nombre" />
-      <Text fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text id="text" fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <TextField id="found" fx:id="textFieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir email" />
-      <Text fx:id="textEmail2" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetir Email" />
+      <Text id="text" fx:id="textEmail2" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetir Email" />
       <TextField id="found" fx:id="textFieldEmail2" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir email" />
       <Text fx:id="textMensaje" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Button id="button" fx:id="buttonRegistrar" mnemonicParsing="false" onAction="#onClickRegistrar" text="registrar">

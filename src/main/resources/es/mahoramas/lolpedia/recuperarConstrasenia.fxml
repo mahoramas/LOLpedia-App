@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="root" alignment="TOP_CENTER" prefHeight="371.0" prefWidth="435.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RecuperarContraseniaController">
+<VBox id="box" alignment="TOP_CENTER" prefHeight="371.0" prefWidth="435.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RecuperarContraseniaController">
    <children>
       <Button id="button" fx:id="atrasButton2" mnemonicParsing="false" onAction="#atrasClick" text="Atras">
          <VBox.margin>
             <Insets right="300.0" top="20.0" />
          </VBox.margin>
       </Button>
-      <Text fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+      <Text id="text" fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
          <VBox.margin>
             <Insets top="20.0" />
          </VBox.margin>

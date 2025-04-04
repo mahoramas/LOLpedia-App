@@ -3,6 +3,8 @@ package es.mahoramas.lolpedia.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.controlsfx.control.HyperlinkLabel;
+
 import es.mahoramas.lolpedia.PrincipalApplication;
 import es.mahoramas.lolpedia.config.ConfigManager;
 import es.mahoramas.lolpedia.controller.abstractas.AbstractController;
@@ -13,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -42,13 +45,13 @@ public class LoginController extends AbstractController {
     protected Text textUsuario;
 
     @FXML
-    protected Button RecoverPassWordButton;
-
-    @FXML
     protected Text textContrasenia;
 
     @FXML
     protected ComboBox comboIdioma;
+
+    @FXML
+    protected Hyperlink hyperlink;
 
     private UsuarioEntity user;
     UsuarioServiceModel usuarioServiceModel;
@@ -128,6 +131,7 @@ public class LoginController extends AbstractController {
     protected void openRegistrarClick() {
         try {
 
+            //mostrarPantalla("registro.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("registro.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 840);
                         Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
@@ -150,7 +154,7 @@ public class LoginController extends AbstractController {
     @FXML
     protected void onRecoverButtonClick() {
         try {
-            Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
+            Stage stage = (Stage) hyperlink.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("recuperarConstrasenia.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla Recuperar Contraseña");

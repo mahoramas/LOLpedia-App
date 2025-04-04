@@ -58,7 +58,30 @@ public abstract class AbstractController {
     @FXML
     protected Text textMensaje;
 
-    
+    @FXML
+    private StackPane contenedor;
+
+public void mostrarPantalla(String fxmlPath) {
+    try {
+        // Cargar la nueva vista desde el FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent nuevaVista = loader.load();
+
+        // Animación: Fade in
+        FadeTransition ft = new FadeTransition(Duration.millis(500), nuevaVista);
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+
+        // Quitar el contenido anterior (opcional si solo hay uno)
+        contenedor.getChildren().clear();
+        contenedor.getChildren().add(nuevaVista);
+        ft.play();
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
 
     public void cambiarIdioma() {
 
