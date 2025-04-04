@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -9,22 +10,23 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox id="box" alignment="TOP_CENTER" prefHeight="422.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ComboBox fx:id="comboIdioma" onAction="#seleccionarIdiomaClick" prefWidth="150.0" promptText="idiomas" />
+<VBox id="box" alignment="TOP_CENTER" prefHeight="422.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.LoginController">
+   <ComboBox fx:id="comboIdioma" onAction="#seleccionarIdiomaClick" prefWidth="150.0" promptText="idiomas" />
       <Label id="title" text="LOLpedia" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagenes/LoL-Symbol.png" />
          </image>
       </ImageView>
+   <Text id="text" fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
       <TextField id="found" fx:id="textFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Usuario" />
+   <Text id="text" fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
       <PasswordField id="found" fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Contraseña" />
       <Hyperlink text="¿Olvidaste la contraseña?" />
       <Button id="button" fx:id="buttonAceptar" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
-      <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar">
-   </children>
+      <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar" />
    <padding>
       <Insets top="20.0" />
    </padding>

@@ -1,4 +1,4 @@
-package es.ies.puerto.model;
+package es.mahoramas.lolpedia.model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

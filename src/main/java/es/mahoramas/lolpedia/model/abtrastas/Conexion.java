@@ -1,4 +1,4 @@
-package es.ies.puerto.model.abtrastas;
+package es.mahoramas.lolpedia.model.abtrastas;
 
 import java.io.File;
 import java.sql.Connection;

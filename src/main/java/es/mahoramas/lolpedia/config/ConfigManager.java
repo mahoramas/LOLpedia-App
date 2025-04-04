@@ -14,10 +14,6 @@ public class ConfigManager {
 
         private static final Properties properties = new Properties();
 
-        static {
-            
-           
-        }
 
         /**
          * Metodo estatico para obtener una propiedad

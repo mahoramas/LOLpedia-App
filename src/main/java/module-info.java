@@ -8,7 +8,6 @@ module es.mahoramas.lolpedia {
 
     opens es.mahoramas.lolpedia to javafx.fxml;
     exports es.mahoramas.lolpedia;
-    exports es.mahoramas.lolpedia.servicio;
     exports es.mahoramas.lolpedia.controller;
     exports es.mahoramas.lolpedia.model;
     opens es.mahoramas.lolpedia.controller to javafx.fxml;

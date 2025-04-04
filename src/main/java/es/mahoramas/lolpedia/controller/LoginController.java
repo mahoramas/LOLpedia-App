@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.mahoramas.lolpedia.PrincipalApplication;
-import  es.mahoramas.lolpedia.config.ConfigManager;
-import  es.mahoramas.lolpedia.controller.abstractas.AbstractController;
-import  es.mahoramas.lolpedia.model.UsuarioEntity;
-import  es.mahoramas.lolpedia.model.UsuarioServiceModel;
+import es.mahoramas.lolpedia.config.ConfigManager;
+import es.mahoramas.lolpedia.controller.abstractas.AbstractController;
+import es.mahoramas.lolpedia.model.UsuarioEntity;
+import es.mahoramas.lolpedia.model.UsuarioServiceModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -129,7 +129,7 @@ public class LoginController extends AbstractController {
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("registro.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            Scene scene = new Scene(fxmlLoader.load(), 820, 840);
                         Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
             stage.setTitle("Pantalla Registro");
             stage.setScene(scene);

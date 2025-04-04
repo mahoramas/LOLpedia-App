@@ -1,4 +1,4 @@
-package es.ies.puerto.controller.abstractas;
+package es.mahoramas.lolpedia.controller.abstractas;
 
 import java.io.File;
 import java.io.FileInputStream;
