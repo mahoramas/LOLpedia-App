@@ -51,7 +51,7 @@ public class LoginController extends AbstractController {
     protected ComboBox comboIdioma;
 
     @FXML
-    protected Hyperlink hyperlink;
+    protected Hyperlink link;
 
     private UsuarioEntity user;
     UsuarioServiceModel usuarioServiceModel;
@@ -105,6 +105,7 @@ public class LoginController extends AbstractController {
             return;
         }
 
+            
         if (user == null){
             textFieldMensaje.setText("Credenciales invalidas");
             return;
@@ -131,7 +132,6 @@ public class LoginController extends AbstractController {
     protected void openRegistrarClick() {
         try {
 
-            //mostrarPantalla("registro.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("registro.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 840);
                         Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
@@ -154,7 +154,7 @@ public class LoginController extends AbstractController {
     @FXML
     protected void onRecoverButtonClick() {
         try {
-            Stage stage = (Stage) hyperlink.getScene().getWindow();
+            Stage stage = (Stage) link.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("recuperarConstrasenia.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla Recuperar Contraseña");

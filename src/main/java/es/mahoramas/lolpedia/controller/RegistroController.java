@@ -45,8 +45,8 @@ public class RegistroController extends AbstractController {
     UsuarioServiceModel usuarioServiceModel;
 
     public RegistroController(){
-        usuarioServiceModel = new UsuarioServiceModel();
     }
+
 
     @FXML
     public void initialize() {
@@ -56,7 +56,8 @@ public class RegistroController extends AbstractController {
 
     @FXML
     protected void onClickRegistrar()  {
-
+        usuarioServiceModel = getUsuarioServiceModel();
+        
         if (textFieldUsuario == null || textFieldUsuario.getText().isEmpty()) {
             textMensaje.setText("¡El nombre de usuario no puede ser nulo o vacio!");
             return;
@@ -86,7 +87,6 @@ public class RegistroController extends AbstractController {
 
         Pattern p = Pattern.compile(patron);
         Matcher m = p.matcher(textFieldEmail.getText());
-
         if (!m.matches()) {
             textMensaje.setText("El correo electrónico no es válido.");
             return;
@@ -102,7 +102,7 @@ public class RegistroController extends AbstractController {
             return;
         }
 
-        boolean registro = usuarioServiceModel.aniadirUsuario(textFieldUsuario.getText(), textFieldPassword.getText(), textFieldNombre.getText(), textFieldEmail.getText());
+        boolean registro = usuarioServiceModel.aniadirUsuario(textFieldUsuario.getText(), textFieldNombre.getText(), textFieldPassword.getText(), textFieldEmail.getText());
         if (registro == false) {
             textMensaje.setText("Ya hay una cuenta con ese usuario e email");
         } else{

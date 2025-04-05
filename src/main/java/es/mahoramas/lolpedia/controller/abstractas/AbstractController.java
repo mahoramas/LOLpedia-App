@@ -2,12 +2,16 @@ package es.mahoramas.lolpedia.controller.abstractas;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.Duration;
 import java.util.Properties;
 
 import es.mahoramas.lolpedia.config.ConfigManager;
 import es.mahoramas.lolpedia.model.UsuarioServiceModel;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -15,7 +19,7 @@ import javafx.scene.text.Text;
 
 public abstract class AbstractController {
 
-    private UsuarioServiceModel usuarioServiceModel;
+    protected UsuarioServiceModel usuarioServiceModel = new UsuarioServiceModel();
 
     private Properties propertiesIdioma;
 
@@ -57,31 +61,6 @@ public abstract class AbstractController {
 
     @FXML
     protected Text textMensaje;
-
-    @FXML
-    private StackPane contenedor;
-
-public void mostrarPantalla(String fxmlPath) {
-    try {
-        // Cargar la nueva vista desde el FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-        Parent nuevaVista = loader.load();
-
-        // Animación: Fade in
-        FadeTransition ft = new FadeTransition(Duration.millis(500), nuevaVista);
-        ft.setFromValue(0.0);
-        ft.setToValue(1.0);
-
-        // Quitar el contenido anterior (opcional si solo hay uno)
-        contenedor.getChildren().clear();
-        contenedor.getChildren().add(nuevaVista);
-        ft.play();
-
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-}
-
 
     public void cambiarIdioma() {
 
@@ -141,8 +120,9 @@ public void mostrarPantalla(String fxmlPath) {
     }
 
 
+
     public UsuarioServiceModel getUsuarioServiceModel() {
-        return this.usuarioServiceModel;
+        return usuarioServiceModel;
     }
 
 

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public abstract class Conexion {
 
-    static final String PATH_DB ="src\\main\\resources\\usuarios.db";
+    static final String PATH_DB ="src/main/resources/usuarios.db";
     private Connection connection;
 
     /**
