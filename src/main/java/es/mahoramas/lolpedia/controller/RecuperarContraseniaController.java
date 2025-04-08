@@ -59,8 +59,9 @@ public class RecuperarContraseniaController  extends AbstractController{
         try {
             Stage stage = (Stage) atrasButton2.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
             stage.setTitle("Pantalla inicio");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

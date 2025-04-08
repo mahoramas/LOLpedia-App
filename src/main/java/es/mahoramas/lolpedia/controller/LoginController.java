@@ -94,7 +94,7 @@ public class LoginController extends AbstractController {
 
         if (textFieldUsuario== null || textFieldUsuario.getText().isEmpty() || 
             textFieldPassword == null || textFieldPassword.getText().isEmpty() ) {
-                textFieldMensaje.setText("Credenciales null o vacias");
+                textFieldMensaje.setText("Credenciales invalidas");
                 return;
         }
 
@@ -113,7 +113,7 @@ public class LoginController extends AbstractController {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("perfil.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
 
             PerfilUsuarioController perfilController = fxmlLoader.getController();
             perfilController.setUsuario(user);
@@ -133,9 +133,10 @@ public class LoginController extends AbstractController {
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("registro.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 840);
-                        Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
+            Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
             stage.setTitle("Pantalla Registro");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
@@ -156,8 +157,9 @@ public class LoginController extends AbstractController {
         try {
             Stage stage = (Stage) link.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("recuperarConstrasenia.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            Scene scene = new Scene(fxmlLoader.load(), 435, 371);
             stage.setTitle("Pantalla Recuperar Contraseña");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

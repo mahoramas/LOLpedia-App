@@ -56,8 +56,9 @@ public class PerfilUsuarioController extends AbstractController{
         try {
             Stage stage = (Stage) buttonVolverAtras.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
             stage.setTitle("Pantalla Usuario");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

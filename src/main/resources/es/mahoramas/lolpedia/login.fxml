@@ -9,34 +9,46 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="box" alignment="TOP_CENTER" prefHeight="422.0" prefWidth="436.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.LoginController">
-   <ComboBox fx:id="comboIdioma" onAction="#seleccionarIdiomaClick" prefWidth="150.0" promptText="idiomas" />
-      <Label id="title" text="LOLpedia" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.LoginController">
+   <children>
+      <ImageView fitHeight="845.0" fitWidth="1429.0" layoutX="-121.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagenes/league-legends.png" />
+            <Image url="@../../../imagenes/lol.png" />
          </image>
       </ImageView>
-   <Text id="text" fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
-      <TextField id="found" fx:id="textFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Usuario" />
-   <Text id="text" fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
-      <PasswordField id="found" fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Contraseña" />
-      <Hyperlink id="link" fx:id="link" onAction="#onRecoverButtonClick" prefHeight="27.0" prefWidth="229.0" text="¿Olvidaste la contraseña?">
-      <font>
-         <Font size="15.0" />
-      </font></Hyperlink>
-   <Text id="error" fx:id="textFieldMensaje" strokeType="OUTSIDE" strokeWidth="0.0">
-      <font>
-         <Font size="18.0" />
-      </font>
-   </Text>
-      <Button id="button" fx:id="buttonAceptar" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
-      <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar" />
-   <padding>
-      <Insets top="20.0" />
-   </padding>
-</VBox>
+      <VBox alignment="TOP_CENTER" layoutX="164.0" layoutY="84.0" pickOnBounds="false" prefHeight="675.0" prefWidth="860.0" spacing="10.0" stylesheets="@../../../css/estilos.css">
+         <ComboBox fx:id="comboIdioma" onAction="#seleccionarIdiomaClick" prefWidth="150.0" promptText="idiomas" />
+            <Label id="title" text="LOLpedia" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagenes/LoL-Symbol.png" />
+               </image>
+            </ImageView>
+         <Text id="text" fx:id="textUsuario" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
+            <TextField id="found" fx:id="textFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Usuario" />
+         <Text id="text" fx:id="textContrasenia" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+            <PasswordField id="found" fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="197.0" promptText="Insertar Contraseña" />
+            <Hyperlink id="link" fx:id="link" onAction="#onRecoverButtonClick" prefHeight="27.0" prefWidth="229.0" text="¿Olvidaste la contraseña?">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Hyperlink>
+         <Text id="error" fx:id="textFieldMensaje" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+            <Button id="button" fx:id="buttonAceptar" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
+            <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar" />
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

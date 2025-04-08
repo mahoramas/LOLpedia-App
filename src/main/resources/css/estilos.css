@@ -1,3 +1,4 @@
+
 /* cajas de texto*/
 #found {
     -fx-font-size: 14px; 
@@ -5,12 +6,7 @@
     -fx-border-radius: 10px; 
     -fx-background-radius: 10px; 
     -fx-background-color: white;
-}
-
-/* contenedor de la pagina*/
-#box {
-    -fx-background-color: linear-gradient(to bottom, #0de7b1, #1e0ef1fa); 
-
+    -fx-border-color:black;
 }
 
 /* botones */
@@ -44,11 +40,9 @@
 
 /* hipervinculos*/
 #link{
-    -fx-text-fill: rgb(0, 0, 0);
-    -fx-underline: true;
-    -fx-font-weight: bold;
+    -fx-fill: #0000;
+    -fx-effect: dropshadow(gaussian, white, 5, 0.8, 0, 0);    -fx-underline: true;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, lightgray, 2, 0.2, 0, 0);
 }
 
 /* Texto error*/
@@ -57,9 +51,6 @@
     -fx-effect: dropshadow(gaussian, rgb(250, 109, 109), 3, 0.8, 0, 0);
 }
 
-#StackPane{
-    -fx-background-image: url("../../../imagenes/lol.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;
-    -fx-background-position: center;
+#box {
+    -fx-background-color:white;
 }
