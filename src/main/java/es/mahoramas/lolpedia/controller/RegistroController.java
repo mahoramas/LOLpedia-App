@@ -37,7 +37,16 @@ public class RegistroController extends AbstractController {
     protected Text textUsuario;
 
     @FXML
+    protected Text textNombre;
+
+    @FXML
     protected Text textContrasenia;
+
+    @FXML
+    protected Text textEmail;
+
+    @FXML
+    protected Text textEmail2;
 
     @FXML
     protected Button atrasButton;
@@ -47,11 +56,9 @@ public class RegistroController extends AbstractController {
     public RegistroController(){
     }
 
-
     @FXML
     public void initialize() {
-        textUsuario.setText(ConfigManager.ConfigProperties.getProperty("textUsuario"));
-        textContrasenia.setText(ConfigManager.ConfigProperties.getProperty("textContrasenia"));
+        cambiarIdioma();
     }
 
     @FXML

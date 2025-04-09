@@ -80,6 +80,21 @@ public abstract class AbstractController {
         if (!(textEmail2 == null)) {
             textEmail2.setText(ConfigManager.ConfigProperties.getProperty("textEmail2"));
         }
+        if (!(textFieldUsuario == null)) {
+            textFieldUsuario.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldUsuario"));
+        }
+        if (!(textFieldPassword == null)) {
+            textFieldPassword.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldPassword"));
+        }
+        if (!(textFieldPassword2 == null)) {
+            textFieldPassword2.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldPassword2"));
+        }
+        if (!(textFieldEmail == null)) {
+            textFieldEmail.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldEmail"));
+        }
+        if (!(textFieldEmail2 == null)) {
+            textFieldEmail2.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldEmail2"));
+        }
     }
     
 

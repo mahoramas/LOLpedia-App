@@ -3,8 +3,6 @@ package es.mahoramas.lolpedia.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.controlsfx.control.HyperlinkLabel;
-
 import es.mahoramas.lolpedia.PrincipalApplication;
 import es.mahoramas.lolpedia.config.ConfigManager;
 import es.mahoramas.lolpedia.controller.abstractas.AbstractController;

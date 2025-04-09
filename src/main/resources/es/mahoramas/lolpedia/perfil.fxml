@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PerfilUsuarioController">
    <children>
       <ImageView fitHeight="826.0" fitWidth="1427.0" layoutX="-118.0" pickOnBounds="true" preserveRatio="true">
