@@ -27,14 +27,25 @@ La app combina accesibilidad, diseño intuitivo y una base de datos rica y actua
 
 ## Diseño
 
-### Wireframe / Prototipo Inicial
-*(Diseñado en Figma)*  
-![Wireframe inicial](https://via.placeholder.com/600x300?text=Wireframe+Placeholder)  
-*El prototipo inicial muestra una estructura básica con un menú lateral y secciones organizadas por categorías de campeones.*
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="images/pantallaInicial.png" width="750px" height="600px" alt="Wireframe inicial"/>
+        <br/>
+        <i>Wireframe inicial en Figma</i>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="images/pantallaActual.png"  width="950px" height="600px" alt="Diseño final"/>
+        <br/>
+        <i>Diseño final en JavaFX </i>
+      </td>
+    </tr>
+  </table>
+</div>
 
-### Diseño Final Implementado
-![Diseño final](https://via.placeholder.com/600x300?text=Final+Design+Placeholder)  
-*El diseño final incluye un esquema de colores inspirado en League of Legends, transiciones interactivas y una navegación mejorada.*
 
 **Cambios clave:**
 1. Mejor organización de las secciones.
@@ -77,7 +88,6 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 ## Demo
 
 ### Vista previa en acción:
-*(Incluye un GIF o enlace a un video mostrando la funcionalidad principal de la app)*  
 ![Demo Placeholder](https://via.placeholder.com/600x300?text=Demo+GIF+Placeholder)
 
 ---
