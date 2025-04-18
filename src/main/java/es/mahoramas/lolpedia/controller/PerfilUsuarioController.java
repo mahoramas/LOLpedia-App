@@ -24,7 +24,7 @@ public class PerfilUsuarioController extends AbstractController{
     private TextField textFieldEmail3;
     
     @FXML 
-    private Button buttonVolverAtras;
+    private Button atrasButton;
 
     UsuarioEntity usuarioEntity;
 
@@ -54,7 +54,7 @@ public class PerfilUsuarioController extends AbstractController{
     @FXML
     protected void onClickVolver(){
         try {
-            Stage stage = (Stage) buttonVolverAtras.getScene().getWindow();
+            Stage stage = (Stage) atrasButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
             stage.setTitle("Pantalla Usuario");

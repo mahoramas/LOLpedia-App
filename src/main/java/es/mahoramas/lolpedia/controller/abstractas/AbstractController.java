@@ -13,6 +13,7 @@ import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -60,7 +61,22 @@ public abstract class AbstractController {
     protected TextField textFieldEmail2;
 
     @FXML
+    protected Button atrasButton;
+
+    @FXML
+    protected Button buttonRegistrar;
+
+    @FXML
+    protected Button buttonIniciarSesion;
+
+    @FXML
+    protected Hyperlink link;
+
+    @FXML
     protected Text textMensaje;
+
+    @FXML 
+    private Button buttonRegistrarEmail;
 
     public void cambiarIdioma() {
 
@@ -94,6 +110,21 @@ public abstract class AbstractController {
         }
         if (!(textFieldEmail2 == null)) {
             textFieldEmail2.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldEmail2"));
+        }
+        if (!(atrasButton == null)) {
+            atrasButton.setText(ConfigManager.ConfigProperties.getProperty("atrasButton"));
+        }
+        if (!(buttonRegistrar == null)) {
+            buttonRegistrar.setText(ConfigManager.ConfigProperties.getProperty("buttonRegistrar"));
+        }
+        if (!(buttonIniciarSesion == null)) {
+            buttonIniciarSesion.setText(ConfigManager.ConfigProperties.getProperty("buttonIniciarSesion"));
+        }
+        if (!(link == null)) {
+            link.setText(ConfigManager.ConfigProperties.getProperty("link"));
+        }
+        if (!(buttonRegistrarEmail == null)) {
+            buttonRegistrarEmail.setText(ConfigManager.ConfigProperties.getProperty("buttonRegistrarEmail"));
         }
     }
     

@@ -34,10 +34,10 @@ public class LoginController extends AbstractController {
     protected Text textFieldMensaje;
 
     @FXML
-    protected Button buttonResgistrar;
+    protected Button buttonRegistrar;
 
     @FXML
-    protected Button buttonAceptar;
+    protected Button buttonIniciarSesion;
 
     @FXML
     protected Text textUsuario;
@@ -116,7 +116,7 @@ public class LoginController extends AbstractController {
             PerfilUsuarioController perfilController = fxmlLoader.getController();
             perfilController.setUsuario(user);
 
-            Stage stage = (Stage) buttonAceptar.getScene().getWindow();
+            Stage stage = (Stage) buttonIniciarSesion.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
@@ -132,7 +132,7 @@ public class LoginController extends AbstractController {
 
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("registro.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
-            Stage stage = (Stage) buttonResgistrar.getScene().getWindow();
+            Stage stage = (Stage) buttonRegistrar.getScene().getWindow();
             stage.setTitle("Pantalla Registro");
             stage.setResizable(false);
             stage.setScene(scene);
@@ -164,8 +164,5 @@ public class LoginController extends AbstractController {
             e.printStackTrace();
         }
 
-    }
-
-
-    
+    }    
 }

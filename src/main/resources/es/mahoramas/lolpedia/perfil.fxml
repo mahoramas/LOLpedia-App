@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PerfilUsuarioController">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PerfilUsuarioController">
    <children>
       <ImageView fitHeight="826.0" fitWidth="1427.0" layoutX="-118.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,7 +31,7 @@
             <TextField id="found" fx:id="textFieldNombre2" maxWidth="-Infinity" promptText="nombre" />
             <Text id="text" fx:id="textEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
             <TextField id="found" fx:id="textFieldEmail3" maxHeight="-Infinity" maxWidth="-Infinity" promptText="email" />
-            <Button id="button" fx:id="buttonVolverAtras" mnemonicParsing="false" onAction="#onClickVolver" text="volver atras" />
+            <Button id="button" fx:id="atrasButton" mnemonicParsing="false" onAction="#onClickVolver" text="Atras" />
          </children>
          <opaqueInsets>
             <Insets />

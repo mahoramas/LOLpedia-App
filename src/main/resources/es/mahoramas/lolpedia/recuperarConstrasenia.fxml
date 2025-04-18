@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="box" alignment="TOP_CENTER" prefHeight="371.0" prefWidth="435.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RecuperarContraseniaController">
+<VBox id="box" alignment="TOP_CENTER" prefHeight="371.0" prefWidth="435.0" spacing="10.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.RecuperarContraseniaController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button id="button" fx:id="atrasButton2" mnemonicParsing="false" onAction="#atrasClick" text="Atras">
+            <Button id="button" fx:id="atrasButton" mnemonicParsing="false" onAction="#atrasClick" text="Atras">
                <HBox.margin>
                   <Insets left="10.0" top="30.0" />
                </HBox.margin>
@@ -33,7 +33,7 @@
             <Insets top="20.0" />
          </VBox.margin>
       </Text>
-      <TextField id="found" fx:id="textFieldEmailRecover" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Escribir Email" />
+      <TextField id="found" fx:id="textFieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Insertar email" />
       <Button id="button" fx:id="buttonRegistrarEmail" mnemonicParsing="false" onAction="#onRecoverButtonClick" text="Aceptar" />
       <Text fx:id="textFieldMensajeRecover" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>

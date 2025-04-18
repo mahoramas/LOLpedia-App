@@ -14,7 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.LoginController">
    <children>
       <ImageView fitHeight="845.0" fitWidth="1429.0" layoutX="-121.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
@@ -44,8 +43,8 @@
                <Font size="18.0" />
             </font>
          </Text>
-            <Button id="button" fx:id="buttonAceptar" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
-            <Button id="button" fx:id="buttonResgistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrar" />
+            <Button id="button" fx:id="buttonIniciarSesion" alignment="TOP_CENTER" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="163.0" text="Iniciar sesion" textAlignment="CENTER" />
+            <Button id="button" fx:id="buttonRegistrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openRegistrarClick" text="Registrarse" />
          <padding>
             <Insets top="20.0" />
          </padding>
