@@ -67,7 +67,7 @@ public abstract class Conexion {
      */
     public void cerrar() {
         try {
-            if (connection != null || !connection.isClosed()) {
+            if (connection != null && !connection.isClosed()) {
                 connection.close();
                 connection = null;
             }
