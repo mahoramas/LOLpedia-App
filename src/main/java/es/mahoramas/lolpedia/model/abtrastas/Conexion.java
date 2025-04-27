@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public abstract class Conexion {
 
     static final String PATH_DB ="src/main/resources/usuarios.db";
-    private Connection connection;
+    protected Connection connection;
 
     /**
      * Constructor con path de conexion
@@ -67,12 +67,14 @@ public abstract class Conexion {
      */
     public void cerrar() {
         try {
-            if (connection != null && !connection.isClosed()) {
-                connection.close();
+            Connection conn = getConnection();
+            if (conn != null && !conn.isClosed()) {
+                conn.close();
                 connection = null;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    
 }

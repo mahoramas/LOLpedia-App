@@ -8,66 +8,66 @@ import java.sql.SQLException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import es.mahoramas.lolpedia.model.abtrastas.Conexion;
 
 class ConexionTest {
 
     private Connection mockConnection;
+    private Conexion conexion;
 
+    // Clase Dummy que fuerza usar el mock
     static class ConexionDummy extends Conexion {
-        private Connection mockedConnection;
-
+        private final Connection mockedConnection;
+    
         public ConexionDummy(Connection mockedConnection) {
             this.mockedConnection = mockedConnection;
         }
-
+    
         @Override
         public Connection getConnection() {
             return mockedConnection;
         }
     }
-
-    private ConexionDummy conexion;
+    
 
     @BeforeEach
     void setUp() {
         mockConnection = mock(Connection.class);
-
         conexion = new ConexionDummy(mockConnection);
     }
 
     @Test
-    void testConectar() throws SQLException {
+    void testConectarDevuelveConexionMockeada() throws SQLException {
+        // Ejecutar
         Connection conn = conexion.getConnection();
-        assertNotNull(conn);
-        assertEquals(mockConnection, conn);
+
+        // Verificar
+        assertNotNull(conn, "La conexión no debería ser nula");
+        assertSame(mockConnection, conn, "La conexión debería ser exactamente el mock");
     }
 
     @Test
-    void testCerrarConexion() throws SQLException {
-        // Preparamos el mock
+    void testCerrarConexionCuandoEstaAbierta() throws SQLException {
+        // Preparar
         when(mockConnection.isClosed()).thenReturn(false);
-    
-        // Inyectamos el mock a una nueva instancia de Conexion
-        conexion = new Conexion() {
-            {
-                this.connection = mockConnection;
-            }
-        };
-    
-        // Ahora cerramos
+
+        // Ejecutar
         conexion.cerrar();
-    
-        // Y verificamos que cerró correctamente
+
+        // Verificar
         verify(mockConnection, times(1)).close();
     }
 
     @Test
-    void testCerrarConexionYaCerrada() throws SQLException {
+    void testCerrarConexionCuandoYaEstaCerrada() throws SQLException {
+        // Preparar
         when(mockConnection.isClosed()).thenReturn(true);
+
+        // Ejecutar
         conexion.cerrar();
+
+        // Verificar
         verify(mockConnection, never()).close();
     }
 }

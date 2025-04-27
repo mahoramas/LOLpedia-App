@@ -25,16 +25,16 @@ public abstract class AbstractController {
     private Properties propertiesIdioma;
 
     @FXML
-    protected Text textUsuario;
+    public Text textUsuario;
 
     @FXML
-    protected TextField textFieldUsuario;
+    public TextField textFieldUsuario;
 
     @FXML
-    protected Text textContrasenia;
+    public Text textContrasenia;
 
     @FXML
-    protected PasswordField textFieldPassword;
+    public PasswordField textFieldPassword;
 
     @FXML
     protected Text textContrasenia2;
@@ -64,7 +64,7 @@ public abstract class AbstractController {
     protected Button atrasButton;
 
     @FXML
-    protected Button buttonRegistrar;
+    public Button buttonRegistrar;
 
     @FXML
     protected Button buttonIniciarSesion;

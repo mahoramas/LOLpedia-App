@@ -6,6 +6,9 @@ module es.mahoramas.lolpedia {
     requires javafx.graphics;
     requires java.sql;
 
+    requires javafx.base;
+
+
     opens es.mahoramas.lolpedia to javafx.fxml;
     exports es.mahoramas.lolpedia;
     exports es.mahoramas.lolpedia.controller;
