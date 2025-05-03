@@ -18,6 +18,12 @@ public class UsuarioServiceModel extends Conexion {
     }
 
 
+    /**
+     * Metodo para obtener un usuario por el email
+     * @param email email del usuario
+     * @param contrasenia contrasenia del usuario
+     * @return un usuario
+     */
     public UsuarioEntity obtenerUsuarioPorEmail(String email, String contrasenia) {
         String sql = "SELECT * FROM Usuario " + "where email= '" + email + "' and contrasenia = '" + contrasenia + "'";
         ArrayList<UsuarioEntity> usuarios = obtenerUsuario(sql);
@@ -28,11 +34,20 @@ public class UsuarioServiceModel extends Conexion {
 
     }
 
+    /**
+     * Metodo para obtener todos los usuarios
+     * @return un arraylist de usuario
+     */
     public ArrayList<UsuarioEntity> obtenerTodosUsuarios() {
         String sql = "SELECT * FROM Usuario";
         return obtenerUsuario(sql);
     }
 
+    /**
+     * Metodo para obtener un usuario
+     * @param sql sentencia sql
+     * @return un arraylist de usuario
+     */
     public ArrayList<UsuarioEntity> obtenerUsuario(String sql) {
         ArrayList<UsuarioEntity> usuarios = new ArrayList<UsuarioEntity>();
         try {
@@ -55,6 +70,12 @@ public class UsuarioServiceModel extends Conexion {
         return usuarios;
     }
 
+    /**
+     * Metodo para obtener un usuario por su nombre de usuario
+     * @param nombreUsuario nombre de usuario del usuario
+     * @param contrasenia contrasenia del usuario
+     * @return un usuario
+     */
     public UsuarioEntity obtenerUsuarioPorNombreUsuario(String nombreUsuario, String contrasenia) {
         String sql = "SELECT * FROM usuario WHERE nombreUsuario = '" + nombreUsuario + "' and contrasenia = '"
                 + contrasenia + "'";
@@ -65,6 +86,14 @@ public class UsuarioServiceModel extends Conexion {
         return usuarios.get(0);
     }
 
+    /**
+     * Metodo para agregar un usuario a la base de datos
+     * @param nombreUsuario nombre de usuario del usuario
+     * @param nombre nombre del usuario
+     * @param contrasenia contrasenia del usuario
+     * @param email email del usuario
+     * @return true o false dependiendo del exito de ejecucion
+     */
     public boolean aniadirUsuario(String nombreUsuario, String nombre, String contrasenia, String email) {
         try {
             PreparedStatement sentencia = getConnection().prepareStatement("INSERT INTO usuario (nombreUsuario, nombre, contrasenia, email) values (?,?,?,?)");
@@ -83,7 +112,7 @@ public class UsuarioServiceModel extends Conexion {
     }
 
     /**
-     * Funcion que verifica si existe el emai asi en los ficheros
+     * Funcion que verifica si existe el email en los ficheros
      * @param email a verificar
      * @return true/false
      */
