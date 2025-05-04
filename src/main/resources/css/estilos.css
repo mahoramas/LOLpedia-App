@@ -11,18 +11,31 @@
 
 /* botones */
 #button{
-    -fx-background-color: #2fe976;
-    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #e6c56c,  
+        #d4a43f,  
+        #a97c21    
+    );
+    -fx-text-fill: #fff8dc;
+    -fx-font-weight: bold;
     -fx-font-size: 16px;
     -fx-padding: 10px;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
-    -fx-effect: dropshadow(gaussian, rgb(255, 255, 255), 3, 0.8, 0, 0);
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 6, 0.0, 0, 2);
 }
 
 /* boton cuando el raton esta encima*/
 #button:hover{
-    -fx-background-color: #187c3f;
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #f5d97a,
+        #e3b850,
+        #c1912a
+    );
 }
 
 /* titulo de la pagina*/
@@ -52,5 +65,29 @@
 }
 
 #box {
-    -fx-background-color:white;
+    -fx-background-color: #061f36
+}
+
+.label {
+    -fx-font-family: "Georgia", serif;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #f7e27c 0%, 
+        #d4af37 40%, 
+        #b8860b 80%, 
+        #8b6914 100% 
+    );
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4, 0.5, 2, 2);
+    -fx-background-color: transparent;
+}
+
+AnchorPane {
+    -fx-background-color: #061f36
+}
+
+Text {
+    -fx-fill: #c3aa6e;
+    -fx-font-weight: bold;
 }

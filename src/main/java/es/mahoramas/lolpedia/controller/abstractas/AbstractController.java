@@ -25,16 +25,16 @@ public abstract class AbstractController {
     private Properties propertiesIdioma;
 
     @FXML
-    public Text textUsuario;
+    protected Text textUsuario;
 
     @FXML
-    public TextField textFieldUsuario;
+    protected TextField textFieldUsuario;
 
     @FXML
-    public Text textContrasenia;
+    protected Text textContrasenia;
 
     @FXML
-    public PasswordField textFieldPassword;
+    protected PasswordField textFieldPassword;
 
     @FXML
     protected Text textContrasenia2;
@@ -77,6 +77,24 @@ public abstract class AbstractController {
 
     @FXML 
     private Button buttonRegistrarEmail;
+
+    @FXML
+    protected Text resumenText;
+
+    @FXML
+    protected Text top;
+
+    @FXML
+    protected Text jungla;
+
+    @FXML
+    protected Text mid;
+
+    @FXML
+    protected Text adc;
+
+    @FXML
+    protected Text supp;
 
     public void cambiarIdioma() {
 
@@ -125,6 +143,24 @@ public abstract class AbstractController {
         }
         if (!(buttonRegistrarEmail == null)) {
             buttonRegistrarEmail.setText(ConfigManager.ConfigProperties.getProperty("buttonRegistrarEmail"));
+        }
+        if (!(resumenText == null)) {
+            resumenText.setText(ConfigManager.ConfigProperties.getProperty("resumenText"));
+        }
+        if (!(top == null)) {
+            top.setText(ConfigManager.ConfigProperties.getProperty("top"));
+        }
+        if (!(jungla == null)) {
+            jungla.setText(ConfigManager.ConfigProperties.getProperty("jungla"));
+        }
+        if (!(mid == null)) {
+            mid.setText(ConfigManager.ConfigProperties.getProperty("mid"));
+        }
+        if (!(adc == null)) {
+            adc.setText(ConfigManager.ConfigProperties.getProperty("adc"));
+        }
+        if (!(supp == null)) {
+            supp.setText(ConfigManager.ConfigProperties.getProperty("supp"));
         }
     }
     

@@ -8,6 +8,7 @@ import es.mahoramas.lolpedia.config.ConfigManager;
 import es.mahoramas.lolpedia.controller.abstractas.AbstractController;
 import es.mahoramas.lolpedia.model.UsuarioEntity;
 import es.mahoramas.lolpedia.model.UsuarioServiceModel;
+import es.mahoramas.lolpedia.sesion.Sesion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -109,18 +110,18 @@ public class LoginController extends AbstractController {
             return;
         } 
 
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("perfil.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
+        Sesion.getInstance().setUsuarioActual(user);
 
-            PerfilUsuarioController perfilController = fxmlLoader.getController();
-            perfilController.setUsuario(user);
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("principal.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
 
             Stage stage = (Stage) buttonIniciarSesion.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("El error es: " +e);
         }
 
         textFieldMensaje.setText("Usuario validado correctamente");

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.mahoramas.lolpedia.controller.PrincipalController">
+   <children>
+      <Text fx:id="resumenText" layoutX="46.0" layoutY="128.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="League of Legends (LoL) es un videojuego de estrategia y acción en línea del género MOBA (Multiplayer Online Battle Arena), desarrollado por Riot Games. En este juego, dos equipos de cinco jugadores se enfrentan con el objetivo de destruir el Nexo del enemigo, que es la estructura principal ubicada en la base rival. La partida se desarrolla en un mapa llamado La Grieta del Invocador, el cual está dividido en tres carriles: superior (top), central (mid) e inferior (bot), además de una zona intermedia conocida como la jungla. Cada jugador asume un rol específico dentro del equipo: el top, el jungla, el mid, el ADC (tirador) en el carril inferior, y el support. Durante la partida, los jugadores suben de nivel, ganan oro, compran objetos y fortalecen sus habilidades. El juego cuenta con una amplia variedad de más de 160 campeones jugables, cada uno con habilidades únicas y estilos de juego distintos. Las partidas tienen una duración promedio de entre 25 y 45 minutos y requieren tanto táctica como habilidad mecánica y trabajo en equipo para ganar." textAlignment="JUSTIFY" wrappingWidth="1085.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="buttonPerfil" fitHeight="76.0" fitWidth="71.0" layoutX="1183.0" layoutY="19.0" onMouseClicked="#perfilButtonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/Perfil.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="46.0" layoutY="14.0" prefHeight="88.0" prefWidth="1041.0" text="BIENVENIDO A LA GRIETA DEL INVOCADOR" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text fx:id="top" layoutX="89.0" layoutY="478.0" onMouseClicked="#onClickTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril superior">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="jungla" layoutX="93.0" layoutY="543.0" onMouseClicked="#onClickJungla" strokeType="OUTSIDE" strokeWidth="0.0" text="Jungla">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="mid" layoutX="94.0" layoutY="609.0" onMouseClicked="#onClickMid" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril central">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="adc" layoutX="92.0" layoutY="673.0" onMouseClicked="#onClickAdc" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril inferior">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="supp" layoutX="93.0" layoutY="738.0" onMouseClicked="#onClickSupp" strokeType="OUTSIDE" strokeWidth="0.0" text="Apoyo">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/top.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/jungla.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/mid.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/bot.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/support.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="360.0" fitWidth="558.0" layoutX="479.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/mapa.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="701.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grieta del invocador" />
+      <Text layoutX="89.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Todos los carriles:" />
+      <Button id="button" fx:id="atrasButton" layoutX="1131.0" layoutY="707.0" mnemonicParsing="false" onAction="#volverAtrasClick" prefHeight="42.0" prefWidth="87.0" text="Atras" />
+      <Text layoutX="1203.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil" />
+   </children>
+</AnchorPane>

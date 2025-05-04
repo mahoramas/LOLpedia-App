@@ -3,6 +3,7 @@ package es.mahoramas.lolpedia.controller;
 import es.mahoramas.lolpedia.PrincipalApplication;
 import es.mahoramas.lolpedia.controller.abstractas.AbstractController;
 import es.mahoramas.lolpedia.model.UsuarioEntity;
+import es.mahoramas.lolpedia.sesion.Sesion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -26,28 +27,26 @@ public class PerfilUsuarioController extends AbstractController{
     @FXML 
     private Button atrasButton;
 
-    UsuarioEntity usuarioEntity;
-
     @FXML
     public void initialize(){
         cambiarIdioma();
+        cargarDatos();
     }
    
     public PerfilUsuarioController(){
         System.out.println("Second");
     }
 
-    public void setUsuario(UsuarioEntity usuario){
-        this.usuarioEntity = usuario;
-        cargarDatos();
-    }
-
     private void cargarDatos(){
-        if (usuarioEntity != null ) {
+        UsuarioEntity usuarioEntity = Sesion.getInstance().getUsuarioActual();
+
+        if (usuarioEntity != null) {
             textFieldUser.setText(usuarioEntity.getNombreUsuario());
             textFieldPasswordUser.setText(usuarioEntity.getContrasenia());
             textFieldNombre2.setText(usuarioEntity.getNombre());
             textFieldEmail3.setText(usuarioEntity.getEmail());
+        } else {
+            System.out.println("No hay usuario en sesión");
         }
     }
 
@@ -55,7 +54,7 @@ public class PerfilUsuarioController extends AbstractController{
     protected void onClickVolver(){
         try {
             Stage stage = (Stage) atrasButton.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("principal.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
             stage.setTitle("Pantalla Usuario");
             stage.setResizable(false);
