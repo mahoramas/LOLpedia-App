@@ -24,7 +24,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Label layoutX="46.0" layoutY="14.0" prefHeight="88.0" prefWidth="1041.0" text="BIENVENIDO A LA GRIETA DEL INVOCADOR" wrapText="true">
+      <Label fx:id="titulo" layoutX="46.0" layoutY="14.0" prefHeight="88.0" prefWidth="1041.0" text="BIENVENIDO A LA GRIETA DEL INVOCADOR" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
@@ -99,9 +99,6 @@
             <Image url="@../../../imagenes/mapa.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="701.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grieta del invocador" />
-      <Text layoutX="89.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Todos los carriles:" />
       <Button id="button" fx:id="atrasButton" layoutX="1131.0" layoutY="707.0" mnemonicParsing="false" onAction="#volverAtrasClick" prefHeight="42.0" prefWidth="87.0" text="Atras" />
-      <Text layoutX="1203.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil" />
    </children>
 </AnchorPane>

@@ -8,7 +8,7 @@ import java.util.Properties;
 public class ConfigManager {
 
     private static final Properties properties = new Properties();
-    private static String currentLanguage = "es"; // Idioma por defecto
+    private static String currentLanguage = "es"; 
 
     public static String getProperty(String key) {
         return properties.getProperty(key);
@@ -23,10 +23,14 @@ public class ConfigManager {
         return currentLanguage;
     }
 
+    /**
+     * Metodo que carga todos los archivos properties
+     */
     private static void cargarPropertiesIdioma() {
         String[] files = {
             "idioma-" + currentLanguage + ".properties",
-            "carriles-" + currentLanguage + ".properties"
+            "carriles-" + currentLanguage + ".properties",
+            "personajes-" + currentLanguage + ".properties"
         };
     
         properties.clear();
@@ -37,6 +41,8 @@ public class ConfigManager {
                 path = "src/main/resources/" + filename;
             } else if (filename.startsWith("carriles")) {
                 path = "src/main/resources/textos/carriles/" + filename;
+            } else if (filename.startsWith("personajes")) {
+                path = "src/main/resources/textos/personajes/" + filename;
             } else {
                 continue;
             }
@@ -57,8 +63,10 @@ public class ConfigManager {
         }
     }
     
-    
 
+    /**
+     * Metodo que inizializa la clase
+     */
     public static void initialize() {
         cargarPropertiesIdioma();
     }

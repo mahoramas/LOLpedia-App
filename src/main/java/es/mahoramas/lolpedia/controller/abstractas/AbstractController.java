@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -75,7 +76,7 @@ public abstract class AbstractController {
     @FXML
     protected Text textMensaje;
 
-    @FXML 
+    @FXML
     private Button buttonRegistrarEmail;
 
     @FXML
@@ -96,6 +97,12 @@ public abstract class AbstractController {
     @FXML
     protected Text supp;
 
+    @FXML
+    protected Label titulo;
+
+    /**
+     * Metodo para cambiar el idioma en distintos campos
+     */
     public void cambiarIdioma() {
 
         if (!(textUsuario == null)) {
@@ -106,7 +113,7 @@ public abstract class AbstractController {
             textContrasenia2.setText(ConfigManager.getProperty("textContrasenia2"));
         }
         if (!(textNombre == null)) {
-            textNombre.setText(ConfigManager.getProperty("textNombre"));    
+            textNombre.setText(ConfigManager.getProperty("textNombre"));
         }
         if (!(textEmail == null)) {
             textEmail.setText(ConfigManager.getProperty("textEmail"));
@@ -162,11 +169,13 @@ public abstract class AbstractController {
         if (!(supp == null)) {
             supp.setText(ConfigManager.getProperty("supp"));
         }
+        if (!(titulo == null)) {
+            titulo.setText(ConfigManager.getProperty("titulo"));
+        }
     }
-    
+
     public UsuarioServiceModel getUsuarioServiceModel() {
         return usuarioServiceModel;
     }
-
 
 }

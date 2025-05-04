@@ -11,33 +11,35 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PerfilUsuarioController extends AbstractController{
-    @FXML 
+public class PerfilUsuarioController extends AbstractController {
+    @FXML
     private TextField textFieldUser;
 
-    @FXML 
+    @FXML
     private TextField textFieldPasswordUser;
 
-    @FXML 
+    @FXML
     private TextField textFieldNombre2;
-    
-    @FXML 
-    private TextField textFieldEmail3;
-    
-    @FXML 
-    private Button atrasButton;
 
     @FXML
-    public void initialize(){
+    private TextField textFieldEmail3;
+
+    @FXML
+    private Button atrasButton;
+
+    /**
+     * Metodo que inicializa la clase
+     */
+    @FXML
+    public void initialize() {
         cambiarIdioma();
         cargarDatos();
     }
-   
-    public PerfilUsuarioController(){
-        System.out.println("Second");
-    }
 
-    private void cargarDatos(){
+    /**
+     * Metodo que carga los datos del usuario
+     */
+    private void cargarDatos() {
         UsuarioEntity usuarioEntity = Sesion.getInstance().getUsuarioActual();
 
         if (usuarioEntity != null) {
@@ -50,8 +52,11 @@ public class PerfilUsuarioController extends AbstractController{
         }
     }
 
+    /**
+     * Metodo para volver a la pantalla anterior
+     */
     @FXML
-    protected void onClickVolver(){
+    protected void onClickVolver() {
         try {
             Stage stage = (Stage) atrasButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("principal.fxml"));
@@ -64,5 +69,5 @@ public class PerfilUsuarioController extends AbstractController{
             e.printStackTrace();
         }
     }
-    
+
 }

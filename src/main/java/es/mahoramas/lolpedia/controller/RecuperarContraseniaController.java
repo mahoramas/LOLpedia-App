@@ -11,37 +11,39 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+public class RecuperarContraseniaController extends AbstractController {
 
-public class RecuperarContraseniaController  extends AbstractController{
-    
-    @FXML 
+    @FXML
     private TextField textFieldEmail;
-    
-    @FXML 
+
+    @FXML
     private Text textFieldMensajeRecover;
 
-    @FXML 
+    @FXML
     private Text textEmail;
-    
-    @FXML 
+
+    @FXML
     private Button buttonRegistrarEmail;
-    
-    @FXML 
+
+    @FXML
     private Button atrasButton;
 
     UsuarioServiceModel usuarioServiceModel;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         cambiarIdioma();
     }
 
-    public RecuperarContraseniaController(){
+    public RecuperarContraseniaController() {
         usuarioServiceModel = new UsuarioServiceModel();
     }
 
+    /**
+     * Metodo que comprueba si el email es correcto
+     */
     @FXML
-    protected void onRecoverButtonClick(){
+    protected void onRecoverButtonClick() {
         if (textFieldEmail == null || textFieldEmail.getText().isEmpty()) {
             textFieldMensajeRecover.setText("¡El Email no puede ser nulo o vacio!");
             return;
@@ -54,8 +56,11 @@ public class RecuperarContraseniaController  extends AbstractController{
         textFieldMensajeRecover.setText("¡Mensaje enviado!, revisa el email");
     }
 
+    /**
+     * Metodo para volver a la pantalla anterior
+     */
     @FXML
-    protected void atrasClick(){
+    protected void atrasClick() {
         try {
             Stage stage = (Stage) atrasButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));

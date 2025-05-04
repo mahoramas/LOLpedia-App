@@ -35,6 +35,10 @@ public abstract class Conexion {
         return this.PATH_DB;
     }
 
+    /**
+     * Obtiene la conexion
+     * @return la conexion
+     */
     public Connection getConnection() {
         try {
             if (connection == null) {

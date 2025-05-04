@@ -17,7 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class RegistroController extends AbstractController {
-    
+
     @FXML
     protected TextField textFiledUsuario;
 
@@ -27,10 +27,10 @@ public class RegistroController extends AbstractController {
     @FXML
     protected Button buttonRegistrar;
 
-    @FXML 
+    @FXML
     protected PasswordField textFieldPassword;
 
-    @FXML 
+    @FXML
     protected PasswordField textFieldPasswordRepit;
 
     @FXML
@@ -53,18 +53,24 @@ public class RegistroController extends AbstractController {
 
     UsuarioServiceModel usuarioServiceModel;
 
-    public RegistroController(){
+    public RegistroController() {
     }
 
+    /**
+     * Metodo que inicializa la clase
+     */
     @FXML
     public void initialize() {
         cambiarIdioma();
     }
 
+    /**
+     * Metodo que verifica los datos y registra al usuario
+     */
     @FXML
-    protected void onClickRegistrar()  {
+    protected void onClickRegistrar() {
         usuarioServiceModel = getUsuarioServiceModel();
-        
+
         if (textFieldUsuario == null || textFieldUsuario.getText().isEmpty()) {
             textMensaje.setText("¡El nombre de usuario no puede ser nulo o vacio!");
             return;
@@ -75,7 +81,8 @@ public class RegistroController extends AbstractController {
             return;
         }
 
-        if (textFieldPassword == null || textFieldPassword.getText().isEmpty()|| textFieldPassword2 == null || textFieldPassword2.getText().isEmpty()) {
+        if (textFieldPassword == null || textFieldPassword.getText().isEmpty() || textFieldPassword2 == null
+                || textFieldPassword2.getText().isEmpty()) {
             textMensaje.setText("¡El password no puede ser nulo o vacio!");
             return;
         }
@@ -85,7 +92,8 @@ public class RegistroController extends AbstractController {
             return;
         }
 
-        if (textFieldEmail == null || textFieldEmail.getText().isEmpty()|| textFieldEmail2 == null || textFieldEmail2.getText().isEmpty()) {
+        if (textFieldEmail == null || textFieldEmail.getText().isEmpty() || textFieldEmail2 == null
+                || textFieldEmail2.getText().isEmpty()) {
             textMensaje.setText("¡El email no puede ser nulo o vacio!");
             return;
         }
@@ -109,16 +117,20 @@ public class RegistroController extends AbstractController {
             return;
         }
 
-        boolean registro = usuarioServiceModel.aniadirUsuario(textFieldUsuario.getText(), textFieldNombre.getText(), textFieldPassword.getText(), textFieldEmail.getText());
+        boolean registro = usuarioServiceModel.aniadirUsuario(textFieldUsuario.getText(), textFieldNombre.getText(),
+                textFieldPassword.getText(), textFieldEmail.getText());
         if (registro == false) {
             textMensaje.setText("Ya hay una cuenta con ese usuario e email");
-        } else{
+        } else {
             textMensaje.setText("¡Usuario registrado!");
         }
     }
 
-        @FXML
-    protected void volverAtrasClick(){
+    /**
+     * Metodo para volver a la pantalla anterior
+     */
+    @FXML
+    protected void volverAtrasClick() {
         try {
             Stage stage = (Stage) atrasButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));

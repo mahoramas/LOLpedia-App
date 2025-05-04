@@ -91,3 +91,38 @@ Text {
     -fx-fill: #c3aa6e;
     -fx-font-weight: bold;
 }
+
+.personaje-link {
+    -fx-fill: #c3aa6e;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+#atrasButton {
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #e6c56c,  
+        #d4a43f,  
+        #a97c21    
+    );
+    -fx-text-fill: #fff8dc;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 6, 0.0, 0, 2);
+}
+
+#atrasButton:hover{
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #f5d97a,
+        #e3b850,
+        #c1912a
+    );
+}

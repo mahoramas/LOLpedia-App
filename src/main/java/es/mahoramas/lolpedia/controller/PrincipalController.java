@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -40,6 +41,9 @@ public class PrincipalController extends AbstractController {
     protected Text supp;
 
     @FXML
+    protected Label titulo;
+
+    @FXML
     public void initialize() {
         cambiarIdioma();
     }
@@ -51,28 +55,30 @@ public class PrincipalController extends AbstractController {
     private void onClickTop() {
         abrirPantallaCarril("top", top);
     }
-    
+
     @FXML
     private void onClickJungla() {
         abrirPantallaCarril("jungla", jungla);
     }
-    
+
     @FXML
     private void onClickMid() {
         abrirPantallaCarril("mid", mid);
     }
-    
+
     @FXML
     private void onClickAdc() {
         abrirPantallaCarril("adc", adc);
     }
-    
+
     @FXML
     private void onClickSupp() {
         abrirPantallaCarril("supp", supp);
     }
-    
 
+    /**
+     * Metodo para volver a la pantalla anterior
+     */
     @FXML
     protected void volverAtrasClick() {
         try {
@@ -88,6 +94,9 @@ public class PrincipalController extends AbstractController {
         }
     }
 
+    /**
+     * Metodo que lleva a la pantalla perfil
+     */
     @FXML
     protected void perfilButtonClick() {
         try {
@@ -103,21 +112,26 @@ public class PrincipalController extends AbstractController {
         }
     }
 
+    /**
+     * Metodo que dependiendo de que carril clickes te lleva a la pantalla carriles
+     * @param carril carril seleccionado
+     * @param sourceNode Nodo seleccionado
+     */
     private void abrirPantallaCarril(String carril, javafx.scene.Node sourceNode) {
         try {
             FXMLLoader loader = new FXMLLoader(PrincipalApplication.class.getResource("Carriles.fxml"));
             Scene scene = new Scene(loader.load(), 1280, 800);
-    
+
             CarrilesController controller = loader.getController();
             controller.setCarril(carril);
-    
+
             Stage stage = (Stage) sourceNode.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-    
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
+
 }
