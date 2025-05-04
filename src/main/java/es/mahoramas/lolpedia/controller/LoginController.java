@@ -83,8 +83,7 @@ public class LoginController extends AbstractController {
 
     
     protected void cargarIdioma(String idioma) {
-        String path = pathFichero + ficheroStr + idioma + ".properties";
-        ConfigManager.ConfigProperties.setPath(path);
+        ConfigManager.setIdioma(idioma);
     }
     
 

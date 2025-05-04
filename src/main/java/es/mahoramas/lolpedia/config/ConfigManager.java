@@ -2,43 +2,64 @@ package es.mahoramas.lolpedia.config;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
 public class ConfigManager {
 
-    public static class ConfigProperties {
+    private static final Properties properties = new Properties();
+    private static String currentLanguage = "es"; // Idioma por defecto
 
-        static String path;
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
+    }
 
-        private static final Properties properties = new Properties();
+    public static void setIdioma(String languageCode) {
+        currentLanguage = languageCode;
+        cargarPropertiesIdioma();
+    }
 
+    public static String getIdioma() {
+        return currentLanguage;
+    }
 
-        /**
-         * Metodo estatico para obtener una propiedad
-         **/
-        public static String getProperty(String key) {
-            return properties.getProperty(key);
-        }
-
-        public static void setPath(String rutaPath) {
-            System.out.println("Dentro del setPath");
-            File file = new File(rutaPath);
-
-            if (!file.exists() || !file.isFile()) {
-                System.out.println("Path:"+file.getAbsolutePath());
+    private static void cargarPropertiesIdioma() {
+        String[] files = {
+            "idioma-" + currentLanguage + ".properties",
+            "carriles-" + currentLanguage + ".properties"
+        };
+    
+        properties.clear();
+    
+        for (String filename : files) {
+            String path;
+            if (filename.startsWith("idioma")) {
+                path = "src/main/resources/" + filename;
+            } else if (filename.startsWith("carriles")) {
+                path = "src/main/resources/textos/carriles/" + filename;
+            } else {
+                continue;
             }
-            path = rutaPath;
-            try {
-                System.out.println("Dentro del ConfigProperties");
-
-                FileInputStream input = new FileInputStream(path);
-                InputStreamReader isr = new InputStreamReader(input, "UTF-8");
+    
+            File file = new File(path);
+    
+            if (!file.exists()) {
+                System.err.println("Archivo de idioma no encontrado: " + path);
+                continue;
+            }
+    
+            try (FileInputStream input = new FileInputStream(file);
+                 InputStreamReader isr = new InputStreamReader(input, "UTF-8")) {
                 properties.load(isr);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+    }
+    
+    
+
+    public static void initialize() {
+        cargarPropertiesIdioma();
     }
 }

@@ -99,110 +99,71 @@ public abstract class AbstractController {
     public void cambiarIdioma() {
 
         if (!(textUsuario == null)) {
-            textUsuario.setText(ConfigManager.ConfigProperties.getProperty("textUsuario"));
-            textContrasenia.setText(ConfigManager.ConfigProperties.getProperty("textContrasenia"));
+            textUsuario.setText(ConfigManager.getProperty("textUsuario"));
+            textContrasenia.setText(ConfigManager.getProperty("textContrasenia"));
         }
         if (!(textContrasenia2 == null)) {
-            textContrasenia2.setText(ConfigManager.ConfigProperties.getProperty("textContrasenia2"));
+            textContrasenia2.setText(ConfigManager.getProperty("textContrasenia2"));
         }
         if (!(textNombre == null)) {
-            textNombre.setText(ConfigManager.ConfigProperties.getProperty("textNombre"));    
+            textNombre.setText(ConfigManager.getProperty("textNombre"));    
         }
         if (!(textEmail == null)) {
-            textEmail.setText(ConfigManager.ConfigProperties.getProperty("textEmail"));
+            textEmail.setText(ConfigManager.getProperty("textEmail"));
         }
         if (!(textEmail2 == null)) {
-            textEmail2.setText(ConfigManager.ConfigProperties.getProperty("textEmail2"));
+            textEmail2.setText(ConfigManager.getProperty("textEmail2"));
         }
         if (!(textFieldUsuario == null)) {
-            textFieldUsuario.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldUsuario"));
+            textFieldUsuario.setPromptText(ConfigManager.getProperty("textFieldUsuario"));
         }
         if (!(textFieldPassword == null)) {
-            textFieldPassword.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldPassword"));
+            textFieldPassword.setPromptText(ConfigManager.getProperty("textFieldPassword"));
         }
         if (!(textFieldPassword2 == null)) {
-            textFieldPassword2.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldPassword2"));
+            textFieldPassword2.setPromptText(ConfigManager.getProperty("textFieldPassword2"));
         }
         if (!(textFieldEmail == null)) {
-            textFieldEmail.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldEmail"));
+            textFieldEmail.setPromptText(ConfigManager.getProperty("textFieldEmail"));
         }
         if (!(textFieldEmail2 == null)) {
-            textFieldEmail2.setPromptText(ConfigManager.ConfigProperties.getProperty("textFieldEmail2"));
+            textFieldEmail2.setPromptText(ConfigManager.getProperty("textFieldEmail2"));
         }
         if (!(atrasButton == null)) {
-            atrasButton.setText(ConfigManager.ConfigProperties.getProperty("atrasButton"));
+            atrasButton.setText(ConfigManager.getProperty("atrasButton"));
         }
         if (!(buttonRegistrar == null)) {
-            buttonRegistrar.setText(ConfigManager.ConfigProperties.getProperty("buttonRegistrar"));
+            buttonRegistrar.setText(ConfigManager.getProperty("buttonRegistrar"));
         }
         if (!(buttonIniciarSesion == null)) {
-            buttonIniciarSesion.setText(ConfigManager.ConfigProperties.getProperty("buttonIniciarSesion"));
+            buttonIniciarSesion.setText(ConfigManager.getProperty("buttonIniciarSesion"));
         }
         if (!(link == null)) {
-            link.setText(ConfigManager.ConfigProperties.getProperty("link"));
+            link.setText(ConfigManager.getProperty("link"));
         }
         if (!(buttonRegistrarEmail == null)) {
-            buttonRegistrarEmail.setText(ConfigManager.ConfigProperties.getProperty("buttonRegistrarEmail"));
+            buttonRegistrarEmail.setText(ConfigManager.getProperty("buttonRegistrarEmail"));
         }
         if (!(resumenText == null)) {
-            resumenText.setText(ConfigManager.ConfigProperties.getProperty("resumenText"));
+            resumenText.setText(ConfigManager.getProperty("resumenText"));
         }
         if (!(top == null)) {
-            top.setText(ConfigManager.ConfigProperties.getProperty("top"));
+            top.setText(ConfigManager.getProperty("top"));
         }
         if (!(jungla == null)) {
-            jungla.setText(ConfigManager.ConfigProperties.getProperty("jungla"));
+            jungla.setText(ConfigManager.getProperty("jungla"));
         }
         if (!(mid == null)) {
-            mid.setText(ConfigManager.ConfigProperties.getProperty("mid"));
+            mid.setText(ConfigManager.getProperty("mid"));
         }
         if (!(adc == null)) {
-            adc.setText(ConfigManager.ConfigProperties.getProperty("adc"));
+            adc.setText(ConfigManager.getProperty("adc"));
         }
         if (!(supp == null)) {
-            supp.setText(ConfigManager.ConfigProperties.getProperty("supp"));
+            supp.setText(ConfigManager.getProperty("supp"));
         }
     }
     
-
-    public void setpropertiesIdioma(Properties properties) {
-        propertiesIdioma = properties;
-    }
-
-    public Properties getPropertiesIdioma() {
-        return propertiesIdioma;
-    }
-
-
-    public Properties loadIdioma(String nombreFichero, String idioma) {
-        Properties properties = new Properties();
-        
-        if (nombreFichero == null || idioma == null) {
-            return properties;
-        }
-        
-        String path = "src/main/resources/" + nombreFichero+"-"+idioma+".properties";
-
-        File file = new File(path);
-
-        if (!file.exists() || !file.isFile()) {
-            System.out.println("Path:"+file.getAbsolutePath());
-            return properties;
-        }
-        
-        try {
-            FileInputStream input = new FileInputStream(path);
-            InputStreamReader isr = new InputStreamReader(input, "UTF-8");
-            properties.load(isr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return properties;
-    }
-
-
-
     public UsuarioServiceModel getUsuarioServiceModel() {
         return usuarioServiceModel;
     }

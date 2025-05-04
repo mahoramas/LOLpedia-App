@@ -29,30 +29,45 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Text fx:id="top" layoutX="89.0" layoutY="478.0" onMouseClicked="#onClickTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril superior">
+      <Text fx:id="top" layoutX="89.0" layoutY="478.0" onMouseClicked="#onClickTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril superior" underline="true">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <Text fx:id="jungla" layoutX="93.0" layoutY="543.0" onMouseClicked="#onClickJungla" strokeType="OUTSIDE" strokeWidth="0.0" text="Jungla">
+      <Text fx:id="jungla" layoutX="93.0" layoutY="543.0" onMouseClicked="#onClickJungla" strokeType="OUTSIDE" strokeWidth="0.0" text="Jungla" underline="true">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <Text fx:id="mid" layoutX="94.0" layoutY="609.0" onMouseClicked="#onClickMid" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril central">
+      <Text fx:id="mid" layoutX="94.0" layoutY="609.0" onMouseClicked="#onClickMid" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril central" underline="true">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <Text fx:id="adc" layoutX="92.0" layoutY="673.0" onMouseClicked="#onClickAdc" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril inferior">
+      <Text fx:id="adc" layoutX="92.0" layoutY="673.0" onMouseClicked="#onClickAdc" strokeType="OUTSIDE" strokeWidth="0.0" text="Carril inferior" underline="true">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <Text fx:id="supp" layoutX="93.0" layoutY="738.0" onMouseClicked="#onClickSupp" strokeType="OUTSIDE" strokeWidth="0.0" text="Apoyo">
+      <Text fx:id="supp" layoutX="93.0" layoutY="738.0" onMouseClicked="#onClickSupp" strokeType="OUTSIDE" strokeWidth="0.0" text="Apoyo" underline="true">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
       <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="287.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
          <image>

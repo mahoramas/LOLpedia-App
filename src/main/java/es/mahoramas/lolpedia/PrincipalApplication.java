@@ -7,9 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import es.mahoramas.lolpedia.config.ConfigManager;
+
 public class PrincipalApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        ConfigManager.initialize();
         FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
         stage.setTitle("Pantalla Principal");

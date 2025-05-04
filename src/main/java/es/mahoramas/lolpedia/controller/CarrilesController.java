@@ -1,11 +1,5 @@
 package es.mahoramas.lolpedia.controller;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-
 import es.mahoramas.lolpedia.PrincipalApplication;
 import es.mahoramas.lolpedia.config.ConfigManager;
 import javafx.fxml.FXML;
@@ -13,13 +7,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class CarrilesController {
+
     private String carril;
 
     @FXML
-    private TextArea textoCarril;
+    private Text textoCarril;
+    
     @FXML
     protected Button atrasButton;
 
@@ -29,22 +26,12 @@ public class CarrilesController {
     }
 
     private void cargarTextoCarril() {
-        String idioma = ConfigManager.getIdioma();
-        String archivo = "/textos/carriles/" + carril + "-" + idioma + ".txt";
-
-        try (InputStream is = getClass().getResourceAsStream(archivo);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
-
-            StringBuilder contenido = new StringBuilder();
-            String linea;
-            while ((linea = reader.readLine()) != null) {
-                contenido.append(linea).append("\n");
-            }
-
-            textoCarril.setText(contenido.toString());
-        } catch (IOException | NullPointerException e) {
+        String keyResumen = carril + "Resumen";
+        String resumen = ConfigManager.getProperty(keyResumen);
+        if (resumen != null && !resumen.isEmpty()) {
+            textoCarril.setText(resumen);
+        } else {
             textoCarril.setText("No se pudo cargar la información del carril.");
-            e.printStackTrace();
         }
     }
 
