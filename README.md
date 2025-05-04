@@ -96,9 +96,9 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 | Característica          | Implementado |
 |-------------------------|--------------|
-| Buscar campeones        | ❌           |
-| Ver habilidades         | ❌           |
-| Información de trasfondo| ❌           |
+| Buscar campeones        | ✅           |
+| Ver habilidades         | ✅           |
+| Información de trasfondo| ✅           |
 | Diseño responsivo       | ✅           |
 | Soporte multilenguaje   | ✅           |
 
