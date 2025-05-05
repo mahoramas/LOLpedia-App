@@ -119,7 +119,7 @@ public class PrincipalController extends AbstractController {
      */
     private void abrirPantallaCarril(String carril, javafx.scene.Node sourceNode) {
         try {
-            FXMLLoader loader = new FXMLLoader(PrincipalApplication.class.getResource("Carriles.fxml"));
+            FXMLLoader loader = new FXMLLoader(PrincipalApplication.class.getResource("carriles.fxml"));
             Scene scene = new Scene(loader.load(), 1280, 800);
 
             CarrilesController controller = loader.getController();
