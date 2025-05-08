@@ -107,8 +107,5 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 ## Roadmap
 
 ### Futuras mejoras:
-- Añadir información de campeones.
-- Mejorar la utilidad de la app.
-- Transmitir toda la información correctamente.
 
 ---
