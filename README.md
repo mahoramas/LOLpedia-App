@@ -1,7 +1,7 @@
 
 # lol-pedia-app
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Build Status](https://img.shields.io/badge/build-finished-brightgreen)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-yellow.svg)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 
